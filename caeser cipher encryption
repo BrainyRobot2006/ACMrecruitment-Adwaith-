@@ -1,0 +1,15 @@
+def encrypt(message):
+    encrypt = []
+    for i in message:
+        encrypt.append(chr(ord(i)+3))
+    encrypt_msg = "".join(encrypt)
+    return encrypt_msg
+def decrypt(message):
+    encrypt = []
+    for i in message:
+        encrypt.append(chr(ord(i)-3))
+    encrypt_msg = "".join(encrypt)
+    return encrypt_msg
+message = input("Enter the message: ")
+print(encrypt(message))
+print(decrypt(encrypt(message)))
